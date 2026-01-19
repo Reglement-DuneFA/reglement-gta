@@ -1,0 +1,202 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(#f6e3b4, #e8c98a);
+    color: #2b2b2b;
+}
+
+/* ================= HEADER ================= */
+.topbar {
+    background: linear-gradient(90deg, #f6e3b4, #e8c98a);
+    padding: 18px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 42px;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+    display: flex;
+    min-height: calc(100vh - 76px);
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 270px;
+    background: #fff4dc;
+    border-right: 2px solid #e0c27a;
+    padding: 25px;
+}
+
+.sidebar h3 {
+    color: #8b5a2b;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    background: #fffbf2;
+    transition: all 0.25s ease;
+}
+
+.sidebar li:hover {
+    background: linear-gradient(90deg, #ffd36b, #ffb703);
+    color: #3b2a00;
+    transform: translateX(4px);
+}
+
+/* ================= CONTENT ================= */
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+/* ================= PAGE ================= */
+.page {
+    display: none;
+    min-height: 100vh;
+}
+
+.page.active {
+    display: block;
+}
+
+/* ================= PAGE HEADER (IMAGE SANS FILTRE) ================= */
+.page-header {
+    position: relative;
+    height: 180px;
+    margin-bottom: 35px;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* TITRE (au-dessus de l’image, sans filtre) */
+.page-header h1 {
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+/* ================= TEXTE ================= */
+.page p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* ================= TITRES RÈGLES ================= */
+.page h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    border-left: 5px solid #ffb703;
+    color: #7a4b00;
+    font-size: 20px;
+}
+
+/* ================= CARTES ================= */
+.page p,
+.page h2 {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* ================= IMAGES PAR RÈGLEMENT ================= */
+
+#discord .page-header {
+    background-image: url("image/backgrounds/reglement-discord.png");
+}
+
+#roleplay .page-header {
+    background-image: url("image/backgrounds/Reglement-Roleplay.png");
+}
+
+#illegal .page-header {
+    background-image: url("image/backgrounds/reglement-illegal.png");
+}
+
+#fdo .page-header {
+    background-image: url("image/backgrounds/Reglement-Fdo.png");
+}
+
+#ems .page-header {
+    background-image: url("image/backgrounds/Reglement-ems.png");
+}
+
+#gouv .page-header {
+    background-image: url("image/backgrounds/Reglement-gouv.png");
+}
+
+#entreprises .page-header {
+    background-image: url("image/backgrounds/Reglement-entreprise.png");
+}
+
+#mort .page-header {
+    background-image: url("image/backgrounds/Reglement-mort-rp.png");
+}
+
+#particulier .page-header {
+    background-image: url("image/backgrounds/Reglement-particulier.png");
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #e0c27a;
+    }
+
+    .page-header {
+        height: 140px;
+    }
+
+    .page-header h1 {
+        font-size: 26px;
+    }
+}
